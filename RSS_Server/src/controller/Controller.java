@@ -50,7 +50,7 @@ public class Controller {
 		
 	}
 	
-	public Account findAccount(String username, String password)//wyszukiwania konta w celu logowania
+	public Account findAccount(String username, String password)//find account to log in
 	{
 		List <Account> result = new ArrayList();
 		Query query = getEntityManager().createNativeQuery("SELECT * from Account WHERE username = ? AND password = ?",Account.class);
@@ -72,7 +72,7 @@ public class Controller {
 		
 	}
 	
-	public Account findAccountByLogin(String username)//wyszukiwania konta w celu rejestracji
+	public Account findAccountByLogin(String username)//find account to sign in
 	{
 		List<Account> result = new ArrayList();
 		Query query = getEntityManager().createNativeQuery("SELECT * from Account WHERE username = ?", Account.class);
@@ -123,7 +123,7 @@ public class Controller {
 	}
 	
 	
-	public List<UserChannel> getChannelsForUser(Account user)
+	public List<UserChannel> getChannelsForUser(Account user) //getting channels for logged in user
 	{
 		List <UserChannel> result = new ArrayList();
 		Query query = getEntityManager().createNativeQuery("SELECT * from UserChannel WHERE userID = ?",UserChannel.class);

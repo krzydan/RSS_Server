@@ -36,16 +36,7 @@ public class Hello
 	        String port = "1433";
 
 	        
-/*	 @POST
-	 @Consumes(MediaType.APPLICATION_JSON)
-	 @Produces(MediaType.TEXT_PLAIN)
-	 public String register() {
-	                   /*List<Account> accounts = f.getAllAccounts();
-	                accounts.forEach(account ->{
-	                	System.out.println(account.getUsername());
-	                });
-	        }*/
-	
+
 	 @GET
 	 @Produces(MediaType.TEXT_PLAIN)
 	 @Consumes(MediaType.TEXT_PLAIN)
@@ -242,7 +233,6 @@ public class Hello
 	 	    	    	
 	 	    	    	category.setChannelCategories(list);
 	 	    	    	c.saveCategory(FormDataMode.ADD, category);
-	 	    	    	//c.saveChannelCategory(FormDataMode.ADD, chanCat);
 	 	    	    }
 	 	    	}
 	 	    }
@@ -262,7 +252,6 @@ public class Hello
 	    		{
 	    			List<ChannelCategory> chList =category.getChannelCategories();
 	    			
-	    			//w kontrolerze zrobic znajdowanie categorychannela dla usera i kategorii i wtedy kasowac categorychannel i potem kategorię jeśli to był jedyny channel categories
 	    			if(chList.size()==1) c.removeObject(category);
 	    		});
 	    	
